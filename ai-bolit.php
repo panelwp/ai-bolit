@@ -15,7 +15,7 @@ $vars->users = new UserList();
 HyperScan::init();
 Progress::init();
 Progress::setPrintFunc('stdOut');
-IniConfig::parse(__DIR__ . '/config.ini');
+//IniConfig::parse(__DIR__ . '/config.ini');
 
 $lang = 'RU';
 $snum = '';
@@ -3095,7 +3095,7 @@ class JSONReport extends Report
     private function addProcStatsSummary()
     {
         $procStats = ProcStats::collectAll();
-        $tick = IniConfig::get('AT_CLKTCK');
+        $tick = 100;
 
         $this->raw_report['summary']['cpu_user'] = $procStats[ProcStats::STAT][13] / $tick;
         $this->raw_report['summary']['cpu_system'] = $procStats[ProcStats::STAT][14] / $tick;

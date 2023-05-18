@@ -29,7 +29,7 @@ Progress::setPrintFunc('stdOut');
 //IniConfig::parse(__DIR__ . '/config.ini');
 PerformanceStats::initPerformanceItems();
 
-$lang = 'RU';
+$lang = 'EN';
 $snum = '';
 $BOOL_RESULT = false;
 
@@ -47,7 +47,6 @@ Translate::setLang($lang);
 // установите 1 для режима "Обычное сканирование", 0 для быстрой проверки и 2 для параноидальной проверки (диагностика при лечении сайтов)
 define('AI_EXPERT_MODE', 2);
 
-define('AI_HOSTER', 0);					   
 define('CLOUD_ASSIST_LIMIT', 5000);
 
 $defaults = [
@@ -115,10 +114,6 @@ $filter = new FileFilter();
 
 $finder = new Finder($filter);
 
-if (!AI_HOSTER) {
-    $finder->setCollectDoorways(true);
-    $finder->setCollectBigFiles(true);
-}									  
 $finder->setCollectSymlinks(true);
 
 if (!function_exists('stripos')) {

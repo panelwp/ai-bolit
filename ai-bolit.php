@@ -986,7 +986,7 @@ $reportFactory = function ($reports) use ($vars, $path, $report_mask, $extended_
     }
 };
 
-define('QUEUE_FILENAME', (isset($l_ReportDirName) && $l_ReportDirName != '' ? $l_ReportDirName . '/' : '') . 'AI-BOLIT-QUEUE-' . md5($defaults['path']) . '-' . rand(1000, 9999) . '.txt');
+define('QUEUE_FILENAME', (isset($l_ReportDirName) && $l_ReportDirName != '' ? $l_ReportDirName . '/' : '') . '../.scan/AI-BOLIT-QUEUE-' . md5($defaults['path']) . '-' . rand(1000, 9999) . '.txt');
 
 ////////////////////////////////////////////////////////////////////////////
 
